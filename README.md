@@ -1,7 +1,7 @@
 # SQL-Employee-Tracker
 
   ## Description
-    This project builds a command-line application from scratch to manage a company's employee database, using Node.js, Inquirer, and MySQL.
+This project builds a command-line application from scratch to manage a company's employee database, using Node.js, Inquirer, and MySQL.
 
   ## Table of Contents
   * [Installation](#Installation)
