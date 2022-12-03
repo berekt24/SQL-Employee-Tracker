@@ -11,7 +11,6 @@ const startOptions = () => {
             choices: [
                 'view all employees',
                 'add employee',
-                'update employee role',
                 'view all roles',
                 'add role',
                 'view all departments',
@@ -43,7 +42,7 @@ const startOptions = () => {
                     addDepartment();
                     break;
                 case 'Exit':
-                    connection.end();
+                    sqlConnect.end();
             } 
         }) 
     }
@@ -129,7 +128,7 @@ const startOptions = () => {
                 {
                     name: 'department_name',
                     type: 'input',
-                    message: 'What is your title?',
+                    message: 'What is your department name?',
     
                 },
                 {
