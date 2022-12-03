@@ -1,20 +1,14 @@
 const inquirer = require('inquirer');
 const mysql = require('mysql2');
 
-const PORT = process.env.PORT || 3001;
-const app = express();
-
-// Express middleware
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
 
 // Connect to database
-const db = mysql.createConnection(
+const sqlConnect = mysql.createConnection(
   {
     host: 'localhost',
-    // MySQL Username
+    
     user: 'root',
-    // TODO: Add MySQL Password
+
     password: '19971024',
     database: 'business_db'
   },
@@ -22,8 +16,28 @@ const db = mysql.createConnection(
 );
 
 
+sqlConnect.connect(err => {
+    if (err) throw err;
+    startOptions();
+});
+
+const startOptions = () => {
+    inquirer
+        .prompt({
+            name: 'choose',
+            type: 'list',
+            message: 'What would you like to do?',
+            choices: [
+                'view all employees',
+                'add employee',
+                'update employee role',
+                'view all roles',
+                'add role',
+                'view all departments',
+                'add department',
+                'exit'
+            ]
+        })
 
 
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-  });
+    }
