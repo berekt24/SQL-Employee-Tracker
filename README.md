@@ -18,7 +18,7 @@
     Open terminal, type 'node index.js', answer the questions to view tables and add to tables.
 
   ## Video Walkthrough 
-     ![Employee Tracker Demo]()
+     ![Employee Tracker Demo](https://drive.google.com/file/d/12nzCEeWco3KNl7urnkfc-8Kv59wSzPve/view)
 
   ## Questions
     Github: https://github.com/berekt24
